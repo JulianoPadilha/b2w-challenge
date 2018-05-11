@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Sidebar from './components/sidebar/Sidebar';
 import Content from './components/content/Content';
 import './App.css';
+import './components/skills/Skills.css';
 
 class App extends Component {
   constructor(props) {

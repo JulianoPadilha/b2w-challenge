@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Card from '../card/Card';
+import { CardEducation, CardExperience} from '../card/Card';
 import './Content.css';
 
 class Content extends Component {
 	render() {
 		const userExperiences = this.props.content.experience;
 		const userEducations = this.props.content.education;
+		const userProfessionalSkills = this.props.content.professionalSkill;
 
 		const changePages = () => {
 			const content = document.querySelector('.content'),
@@ -24,7 +25,7 @@ class Content extends Component {
 					{
 						userEducations.university.map((education, index) => {
 							return (
-								<Card 
+								<CardEducation 
 									key={ index } 
 									name={ education.courseName }
 									month={ education.month }
@@ -41,11 +42,29 @@ class Content extends Component {
 					{
 						userExperiences.company.map((experience, index) => {
 							return (
-								<Card 
+								<CardExperience 
 									key={ index } 
-									name={ experience.name }
-									date={ experience.date }
+									companyname={ experience.companyName }
+									month={ experience.month }
+									year={ experience.year }
+									role={ experience.roleName }
+									companycity={ experience.companyCity }
 									description={ experience.description }/>
+							)
+						})
+					}
+				</section>
+				<section className="professional_skills">
+					<h2>{ userProfessionalSkills.title }</h2>
+					{	
+						userProfessionalSkills.tools.map((tool, index) => {
+							return (
+								<div className="skill" key={ index }>
+									<p className="skill_name">{ tool.toolName }</p>
+									<div className="skill_bar">
+										<span className="skill_value" style={{ width: tool.toolsSkill+'%' }}></span>
+									</div>
+								</div>
 							)
 						})
 					}

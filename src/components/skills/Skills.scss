@@ -1,0 +1,36 @@
+.skill {
+	width: 100%;
+	display: table;
+	margin-bottom: 20px;
+
+	.skill_name {
+		padding-bottom: 10px;
+		display: table-cell;
+		width: 200px;
+		text-transform: uppercase;
+	}
+
+	.skill_bar {
+		border: 1px solid #fff;
+		display: inline-block;
+		width: 200px;
+	}
+
+	.skill_value {
+		background-color: #fff;
+		height: 12px;
+		display: block;
+	}
+}
+
+.professional_skills {
+	.skill {
+		.skill_bar {
+			border: none;
+		}
+
+		.skill_value {
+			background-color: #999;
+		}
+	}
+}
