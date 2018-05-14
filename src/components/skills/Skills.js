@@ -1,3 +1,5 @@
+// Componente não utilizado. Mas a ideia seria ter um componente de skill bar. =)
+
 import React from 'react';
 
 const Skills = (props) => {

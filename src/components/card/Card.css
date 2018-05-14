@@ -1,8 +1,21 @@
 .card {
-  margin-bottom: 40px; }
+  margin-bottom: 20px;
+  display: flex; }
+  .card .card_date * {
+    display: block;
+    text-align: center;
+    color: #666; }
+  .card .card_content {
+    margin-left: 30px; }
   .card .card_title {
     text-transform: uppercase;
     font-size: 1.125rem;
     padding-bottom: 8px; }
+  .card .card_subtitle {
+    color: #333333; }
   .card .card_description {
-    padding-top: 8px; }
+    padding-top: 8px;
+    color: #666; }
+    @media screen and (min-width: 1190px) {
+      .card .card_description {
+        max-width: 350px; } }

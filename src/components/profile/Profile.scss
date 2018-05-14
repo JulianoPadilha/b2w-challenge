@@ -6,29 +6,18 @@
 	@media screen and(max-width: 992px) {
 		padding: 50px 0;
 	}
+	@media screen and(max-width: 1190px) {
+		max-width: 100%;
+	}
 	> * {
 		color: #fff;
 	}
 
 	.profile_avatar {
-		border: 3px solid #fff;
-		display: inline-block;
-		transform: rotate(45deg);
-		width: 100px;
-		overflow: hidden;
-		height: 100px;
-		background-color: #DADADA;
-		position: relative;
-		margin-bottom: 30px;
-
+		margin-bottom: 20px;
 		img {
-			transform: rotate(-45deg);
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			margin: auto;
+			width: 216px;
+			border-radius: 10px 0;
 		}
 	}
 
@@ -61,6 +50,12 @@
 	.profile_section {
 		margin-bottom: 50px;
 		text-align: left;
+		@media screen and(max-width: 1190px) { 
+			padding: 0 50px;
+		}
+		@media screen and(max-width: 992px) {
+			padding: 0 30px;
+		}
 		
 		.title {
 			display: flex;

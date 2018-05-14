@@ -18,10 +18,7 @@
       .content i {
         display: block; } }
   .content .section {
-    margin-bottom: 70px; }
-    @media screen and (max-width: 992px) {
-      .content .section {
-        margin-top: 30px; } }
+    margin-top: 40px; }
     .content .section .title {
       display: flex;
       align-items: center;

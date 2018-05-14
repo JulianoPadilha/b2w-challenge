@@ -97,12 +97,15 @@ class Content extends Component {
 						<h1>{ userContent.award.title }</h1>
 					</div>
 					<div className="card">
-						<h2 className="card_title">{ userContent.award.awardName }</h2>
-						<span className="card_date">{ userContent.award.month }</span>
-						<span className="card_year">{ userContent.award.year }</span>
-						<p className="">{ userContent.award.description }</p>
-						<p className="">{ userContent.award.projectName }</p>
-						<p className="">{ userContent.award.city }</p>
+						<div className="card_date">
+							<span className="card_mont">{ userContent.award.month }</span>
+							<span className="card_year">{ userContent.award.year }</span>
+						</div>
+						<div className="card_content">
+							<h2 className="card_title">{ userContent.award.awardName }</h2>
+							<span className="card_subtitle">{ userContent.award.projectName }, { userContent.award.city }</span>
+							<p className="card_description">{ userContent.award.description }</p>
+						</div>
 					</div>
 				</section>
 			</div>

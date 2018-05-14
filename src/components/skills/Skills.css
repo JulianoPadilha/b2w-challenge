@@ -1,7 +1,6 @@
 .skill {
   width: 100%;
-  display: table;
-  margin-bottom: 20px; }
+  display: table; }
   .skill .skill_name {
     padding-bottom: 10px;
     display: table-cell;
@@ -11,6 +10,9 @@
     background-color: #fff;
     display: inline-block;
     width: 200px; }
+    @media screen and (max-width: 1190px) {
+      .skill .skill_bar {
+        width: 100%; } }
   .skill .skill_value {
     background-color: #A7A5A6;
     height: 12px;

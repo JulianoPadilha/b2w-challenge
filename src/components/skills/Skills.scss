@@ -1,7 +1,6 @@
 .skill {
 	width: 100%;
 	display: table;
-	margin-bottom: 20px;
 
 	.skill_name {
 		padding-bottom: 10px;
@@ -14,6 +13,9 @@
 		background-color: #fff;
 		display: inline-block;
 		width: 200px;
+		@media screen and(max-width: 1190px) {
+			width: 100%;
+		}
 	}
 
 	.skill_value {
