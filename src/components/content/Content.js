@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import { CardEducation, CardExperience} from '../card/Card';
 import './Content.css';
 
+// Images
+import educationImg from '../../assets/education.png';
+import experienceImg from '../../assets/experience.png';
+import professionalSkillImg from '../../assets/professionalskill.png';
+import awardImg from '../../assets/award.png';
+
+
 class Content extends Component {
 	render() {
-		const userExperiences = this.props.content.experience;
-		const userEducations = this.props.content.education;
-		const userProfessionalSkills = this.props.content.professionalSkill;
+		const userContent = this.props.content;
 
 		const changePages = () => {
 			const content = document.querySelector('.content'),
@@ -21,9 +26,14 @@ class Content extends Component {
 			<div className="content">
 				<i onClick={ changePages } className="fas fa-exchange-alt"></i>
 				<section className="section">
-					<h1>{ userEducations.title }</h1>
+					<div className="title">
+						<div className="img_wrapper">
+							<img className="background_icon" src={ educationImg } alt="Education Icon" />
+						</div>
+						<h1>{ userContent.education.title }</h1>
+					</div>
 					{
-						userEducations.university.map((education, index) => {
+						userContent.education.university.map((education, index) => {
 							return (
 								<CardEducation 
 									key={ index } 
@@ -38,9 +48,14 @@ class Content extends Component {
 					}
 				</section>
 				<section className="section">
-					<h1>{ userExperiences.title }</h1>
+					<div className="title">
+						<div className="img_wrapper">
+							<img className="background_icon" src={ experienceImg } alt="Experience Icon" />
+						</div>
+						<h1>{ userContent.experience.title }</h1>
+					</div>
 					{
-						userExperiences.company.map((experience, index) => {
+						userContent.experience.company.map((experience, index) => {
 							return (
 								<CardExperience 
 									key={ index } 
@@ -54,10 +69,15 @@ class Content extends Component {
 						})
 					}
 				</section>
-				<section className="professional_skills">
-					<h2>{ userProfessionalSkills.title }</h2>
+				<section className="section professional_skills">
+					<div className="title">
+						<div className="img_wrapper">
+							<img className="background_icon" src={ professionalSkillImg } alt="Professional Skill Icon" />
+						</div>
+						<h1>{ userContent.professionalSkill.title }</h1>
+					</div>
 					{	
-						userProfessionalSkills.tools.map((tool, index) => {
+						userContent.professionalSkill.tools.map((tool, index) => {
 							return (
 								<div className="skill" key={ index }>
 									<p className="skill_name">{ tool.toolName }</p>
@@ -68,6 +88,22 @@ class Content extends Component {
 							)
 						})
 					}
+				</section>
+				<section className="section">
+					<div className="title">
+						<div className="img_wrapper">
+							<img className="background_icon" src={ awardImg } alt="Award Icon" />
+						</div>
+						<h1>{ userContent.award.title }</h1>
+					</div>
+					<div className="card">
+						<h2 className="card_title">{ userContent.award.awardName }</h2>
+						<span className="card_date">{ userContent.award.month }</span>
+						<span className="card_year">{ userContent.award.year }</span>
+						<p className="">{ userContent.award.description }</p>
+						<p className="">{ userContent.award.projectName }</p>
+						<p className="">{ userContent.award.city }</p>
+					</div>
 				</section>
 			</div>
 		)

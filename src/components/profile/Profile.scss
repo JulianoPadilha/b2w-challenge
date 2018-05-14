@@ -49,38 +49,63 @@
 			font-size: 3.125rem;
 			margin: 0 auto;
 			text-align: center;
+			font-weight: 300;
 		}
 
 		h4 {
-			font-size: 0.875rem;
-			font-weight: normal;
+			font-size: 22px;
+			font-weight: 300;
 		}
 	}
 
 	.profile_section {
-		margin-bottom: 20px;
+		margin-bottom: 50px;
 		text-align: left;
+		
+		.title {
+			display: flex;
+			align-items: center;
+			margin-bottom: 20px;
+
+			.img_wrapper {
+				width: 70px;
+				height: 70px;
+				background-color: #f6f6f6;
+				border-radius: 10px 0;
+				position: relative;
+
+				.background_icon {
+					position: absolute;
+				    top: 0;
+				    bottom: 0;
+				    left: 0;
+				    right: 0;
+				    margin: auto;
+				}
+			}
+		}
+
 		h2 {
-			position: relative;
-			margin-bottom: 15px;
-			padding-bottom: 15px;
+			margin-left: 30px;
 			font-size: 2rem;
 			text-transform: uppercase;
+			font-weight: 300;
 		}
 
 		> p {
+			font-weight: 300;
 			font-size: 1.4rem;
 			padding: 0 10px 0 0;
 		}
 
-		.profile_phone,
-		.profile_address,
 		.profile_contact {
-				line-height: 24px;
-		}
+			margin-bottom: 10px;
 
-		.profile_contact {
-			margin-bottom: 50px;
+			p {
+				display: inline-table;
+			    vertical-align: top;
+			    margin-left: 10px;
+			}
 		}
 	}
 }

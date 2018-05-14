@@ -11,13 +11,13 @@
 	}
 
 	.skill_bar {
-		border: 1px solid #fff;
+		background-color: #fff;
 		display: inline-block;
 		width: 200px;
 	}
 
 	.skill_value {
-		background-color: #fff;
+		background-color: #A7A5A6;
 		height: 12px;
 		display: block;
 	}
@@ -27,10 +27,11 @@
 	.skill {
 		.skill_bar {
 			border: none;
+			background-color: #A7A5A6;
 		}
 
 		.skill_value {
-			background-color: #999;
+			background-color: #4ac5b1;
 		}
 	}
 }
